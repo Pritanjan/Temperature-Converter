@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="input-group">
+            <label for="temperature">Enter your temperature:</label>
+            <input type="number" id="temperature" step="0.01">
+        </div>
+        <div class="input-group">
+            <label for="fromUnit">Enter your input scale:</label>
+            <select id="fromUnit">
+                <option value="" disabled selected>Select input scale</option>
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+        </div>
+        <div class="output-group">
+            <label for="toUnit">Enter your output scale:</label>
+            <select id="toUnit">
+                <option value="" disabled selected>Select output scale</option>
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+            <br><br>
+            <div class="result-container">
+                <label for="result"></label>
+                <span id="result"></span>
+            </div>
+        </div>
+        <div class="button-group">
+            <button onclick="convertTemperature()">Convert</button>
+            <button onclick="clearFields()">Clear</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
